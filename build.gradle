@@ -1,0 +1,23 @@
+plugins {
+    id 'scala'
+    id 'application'
+}
+
+version '1.0-SNAPSHOT'
+
+mainClassName = 'Server'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+apply from: rootProject.file('dependencies.gradle')
+
+dependencies {
+    compile commonDependencies.scalaLibrary
+    compile commonDependencies.akka
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

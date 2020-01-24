@@ -1,0 +1,17 @@
+products:
+   src/main/scala/Server.scala -> build/classes/scala/main/Server$.class
+   src/main/scala/Server.scala -> build/classes/scala/main/Server$delayedInit$body.class
+   src/main/scala/Server.scala -> build/classes/scala/main/Server.class
+binary dependencies:
+   src/main/scala/Server.scala -> /Users/stephen.kobata/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-actor_2.12/2.5.23/1b72bcc2e504bcb0167c5b21b84f29839c93db58/akka-actor_2.12-2.5.23.jar
+   src/main/scala/Server.scala -> /Users/stephen.kobata/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-http-core_2.12/10.1.7/f6d11d6c6789e764826dad8bfd630dc11682cf96/akka-http-core_2.12-10.1.7.jar
+   src/main/scala/Server.scala -> /Users/stephen.kobata/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-http_2.12/10.1.7/1e1da334190f30dc151d4ff6b8600704debca75d/akka-http_2.12-10.1.7.jar
+   src/main/scala/Server.scala -> /Users/stephen.kobata/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-stream_2.12/2.5.23/f8ac8a82d75c35d2f09c3ec659ab5ca01dbfe302/akka-stream_2.12-2.5.23.jar
+   src/main/scala/Server.scala -> /Users/stephen.kobata/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.12.8/36b234834d8f842cdde963c8591efae6cf413e3f/scala-library-2.12.8.jar
+   src/main/scala/Server.scala -> /Users/stephen.kobata/workday/jdks/zulujdk_8_21_0_2/jre/lib/rt.jar
+source dependencies:
+external dependencies:
+class names:
+   src/main/scala/Server.scala -> Server
+   src/main/scala/Server.scala -> Server$
+   src/main/scala/Server.scala -> Server$delayedInit$body

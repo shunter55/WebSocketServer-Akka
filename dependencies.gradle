@@ -1,0 +1,36 @@
+ext {
+
+    versions = [
+            scala       : scalaVersion,
+            scalaLibrary: "2.12.8",
+            akkaHttp    : "10.1.7",
+            akkaStream  : "2.5.23",
+            scalaTest   : "3.0.5",
+            mockito     : "2.23.4"
+    ]
+
+    commonDependencies = [
+            scalaLibrary: [
+                    [group: "org.scala-lang", name: "scala-library", version: "$versions.scalaLibrary"],
+                    [group: "org.scala-lang", name: "scala-reflect", version: "$versions.scalaLibrary"]
+            ],
+            
+            akka        : [
+                    [group: "com.typesafe.akka", name: "akka-http_$versions.scala", version: "$versions.akkaHttp"],
+                    [group: "com.typesafe.akka", name: "akka-stream_$versions.scala", version: "$versions.akkaStream"]
+            ],
+
+            akkaTest    : [
+                    [group: 'com.typesafe.akka', name: "akka-stream-testkit_$versions.scala", version: "$versions.akkaStream"],
+            ],
+            
+            scalaTest   : [
+                    [group: "org.scalatest", name: "scalatest_$versions.scala", version: "$versions.scalaTest"]
+
+            ],
+            
+            mockito     : [
+                    [group: "org.mockito", name: "mockito-core", version: "$versions.mockito"]
+            ]
+    ]
+}
