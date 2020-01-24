@@ -30,16 +30,7 @@ class Server {
   val port = 8080
 
   def apply(): Unit = {
-    val route: Route = get {
-      pathEndOrSingleSlash {
-        complete("Welcome to websocket server!")
-      }
-    } ~
-      path("ws-echo") {
-        get {
-          handleWebSocketMessages(echoService())
-        }
-      }
+    val route: Route = getRoute()
 
     val binding: Future[Http.ServerBinding] = Http().bindAndHandle(route, interface, port)
 
@@ -59,6 +50,29 @@ class Server {
       case _ => TextMessage("Message type unsupported.")
     }
   }
+
+  def getRoute(): Route = {
+    get {
+      pathEndOrSingleSlash {
+        complete("Welcome to websocket server!")
+      }
+    } ~
+    path("ws-echo") {
+      get {
+        handleWebSocketMessages(echoService())
+      }
+    } ~
+    pathPrefix("ws-chat" / IntNumber) {
+      chatId: Int => {
+        parameter('name) {
+          userName: String =>
+            handleWebSocketMessages(ChatRooms.findOrCreate(chatId).websocketFlow(userName))
+        }
+      }
+    }
+
+  }
+
 }
 
 

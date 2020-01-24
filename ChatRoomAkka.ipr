@@ -64,6 +64,9 @@
       </parameters>
     </profile>
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
   <component name="libraryTable">
     <library name="Gradle: com.typesafe.akka:akka-actor_2.12:2.5.23">
       <CLASSES>
